@@ -1,0 +1,163 @@
+* {
+    color: rgb(69,125,151);
+    font-family: 'Arial', 'Noto Sans TC', sans-serif;
+}
+
+nav{
+    margin-top:20px;
+}
+.text-font{
+    font-weight: bold;
+    font-family:"微軟正黑體" ;
+}
+.text-fo{
+    font-family:"微軟正黑體" ;
+}
+
+.body{
+    margin-top:10%;
+}
+
+footer{
+    margin-top:10%;
+}
+
+
+a:hover{
+    text-decoration: none;
+}
+.noin{
+    margin: 100px 0;
+}
+
+/* ============== modal  ===================== */
+.signimg {
+    width: 40%;
+    border-radius: 50%;
+}
+/* ============== shop class  ===================== */
+.shopclass{
+    margin-top: 10%;
+}
+.all{
+    font-family: "微軟正黑體";
+    font-weight: bold;
+    font-size: 40px;
+}
+.burn{
+    font-family: "微軟正黑體";
+    font-weight:bold;
+    font-size: 40px;
+    color: red;
+}
+.fic{
+    font-family: "微軟正黑體";
+    font-weight:bold;
+    font-size: 40px;
+    color: rgb(68, 0, 204);
+}
+.daily{
+    font-family: "偉軟正黑體";
+    font-weight: bold;
+    font-size: 40px;
+    color: rgb(153, 221, 0);
+}
+
+/* ============== 分隔線  ===================== */
+hr{
+    width: 80%;
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+}
+
+/* ============== 換燈片  ===================== */
+.carousel img{
+    min-height: 200px;
+}
+
+/* ============== background  ===================== */
+body {
+    background-image: url("../img/background.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+/* ============== btn  ===================== */
+
+.btnstyle {
+    color: #fff;
+    background-color: rgb(69,125,151);
+    border-color: rgb(69,125,151);
+}
+
+.btnstyle:hover {
+    background-color: rgb(204, 178, 76);
+    border-color:  rgb(255,253,192);
+    text-decoration: none;
+}
+
+/* ============== card ===================== */
+.cards h4{
+    margin-top: 35px;
+}
+
+.cards img:hover{
+    -webkit-filter:contrast(2);
+}
+
+@media screen and (min-width: 768px) {
+    .mg {
+        margin-right: 50px;
+        margin-left: 8.5%;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .mg {
+        margin-right: 50px;
+        margin-left: 10%;
+    }
+}
+/* ============== 返回建 ===================== */
+.toTop-arrow {
+    width: 3.5rem;
+    height: 3.5rem;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    border-radius: 33%;
+    opacity: 0.6;
+    background: #000;
+    cursor: pointer;
+    position:fixed;
+    right: 1rem;
+    bottom: 1rem;
+    display: none;
+  }
+  .toTop-arrow::before, .toTop-arrow::after {
+    width: 31px;
+    height: 7px;
+    border-radius: 3px;
+    background: #f90;
+    position: absolute;
+    content: "";
+  }
+  .toTop-arrow::before {
+    transform: rotate(-45deg) translate(0, -50%);
+    left: 0.4rem;
+  }
+  .toTop-arrow::after {
+    transform: rotate(45deg) translate(0, -50%);
+    right: 0.4rem;
+  }
+  .toTop-arrow:focus {outline: none;}
+
+    /* ============== AD 廣告 ===================== */
+
+    .ad {
+        border-radius: 0.3rem;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+      }
