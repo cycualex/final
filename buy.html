@@ -1,0 +1,214 @@
+<link rel="Shortcut Icon" href="favicon.ico">
+<!DOCTYPE html>
+<html lang="zn_HANT-tw">
+    <head>
+        <title>CYCH</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        <link href="https://fonts.googleapis.com/css?family=Italianno" rel="stylesheet">
+        
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
+        <link rel="stylesheet" href="source/css/bootstrap.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="source/js/bootstrap.js"></script>
+        
+        <style>
+        @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+        @import url("source/css/style.css");
+        @import url("source/css/nav.css");
+        </style>
+    </head>
+    <body id="main">
+        
+        
+        <header class="container-fluid">
+            <!-- Nav 開始 -->
+            <nav class="row">
+                <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; MENU</span>
+                <div id="MySidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="shop.html">商品</a>
+                    <a href="cart.html">購物車</a>
+                    <a href="member.html">關於我們</a>
+                    <a href="customerCenter.html">會員中心</a>
+                    
+                </div>
+            </nav>
+            <!-- Nav 結束 -->
+            <img class="mx-auto d-block img-fluid" src="source/img/icon/logo.png" style="height:100px" />
+            <div class="row">
+                <div class="col-12 d-flex flex-row-reverse">
+                    <a class="btn btnstyle col-3 col-sm-3 col-md-2 col-lg-1 m-1" href="index.html">首頁</a>
+                    <button type="button" class="btn btnstyle col-3 col-sm-3 col-md-2 col-lg-1 m-1" data-toggle='modal'
+                    data-target='#logout'>登出</button>
+                    
+                </div>
+            </div>
+        </header>
+        
+        <div class="container body">
+            
+            <form method="post" action="source/jsp/pay.jsp" class="was-validated">
+                
+                <div class="text-center h2">商品列表</div>
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover" style="min-width:1000px">
+                        <thead>
+                            <tr>
+                                <th>縮圖</th>
+                                <th>商品</th>
+                                <th>單價</th>
+                                <th>數量</th>
+                                <th>商品庫存</th>
+                                <th>小計</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr class="cart-row">
+                                <td><img src="source/img/product/p2.jpg" width="50px" height="50px"></td>
+                                <td>一拳超人</td>
+                                <td>NT$<span id="price0">300</span></td>
+                                <td>
+                                    <button type="button" class="sub btn btnstyle">-</button>
+                                    <input id="quantity0" name="quantity0" type="text" class="cartnum field btn btn-dark" value='1' style="ime-mode:disabled" onkeyup="return ValidateNumber(this,value)" size="1" required/>
+                                    <button type="button" class="add btn btnstyle">+</button>
+                                </td>
+                                <td id="buymax0">30</td>
+                                <td style="width:20%;">NT$<span id="smalltotal0">0</span></td>
+                                <td><a href="removecart.jsp?id=p2" class="btn btn-danger">刪除</a></td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+                <p>總價:NT$<span id="total">0</span></p>
+                <div class="col-sm-12">
+                    <div class="col-sm-8 offset-sm-2">
+                        <div class="text-center h2">訂購資料</div>
+                        <div class="form-group">
+                            <label>手機號碼:</label>
+                            <input type="tel" class="form-control form-control-lg" pattern="[0-9]{10}" name="payPhone" required/>
+                            <div class="valid-feedback">已輸入</div>
+                            <div class="invalid-feedback">輸入手機號碼</div>
+                        </div>
+                        <div class="form-group">
+                            <label>地址:</label>
+                            <input type="text" class="form-control form-control-lg" name="payAddress" required/>
+                            <div class="valid-feedback">已輸入</div>
+                            <div class="invalid-feedback">不為空值</div>
+                        </div>
+                        <div class="form-group">
+                            <label>郵局帳號:</label>
+                            <input type="text" class="form-control form-control-lg" name="pay" required/>
+                            <div class="valid-feedback">已輸入</div>
+                            <div class="invalid-feedback">不為空值</div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit"  class="btn btnstyle">購買</button>
+                        <a href="cart.jsp"  class="btn btnstyle">返回</a>
+                    </div>
+                    
+                </form>
+                
+            </div>
+            
+            <div class="text-center text-font"  style="margin-top:100px;">
+                
+                
+                <p class="h2 text-font">推薦商品</p>
+                <div id="demo3" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        
+                        <div class="carousel-item active">
+                            
+                            <a href="productinfo.html">
+                                <img src="source/img/ad/001.jpg" width="100%" class="rounded shadow">
+                            </a>
+                            <p>干物妹小埋</p>
+                        </div>
+                        
+                        <div class="carousel-item">
+                            
+                            <a href="">
+                                <img src="source/img/ad/007.jpg" width="100%" class="rounded shadow">
+                            </a>
+                            <p>亞人醬有話要說</p>
+                        </div>
+                        <div class="carousel-item">
+                            
+                            <a href="">
+                                <img src="source/img/ad/008.jpg" width="100%" class="rounded shadow">
+                            </a>
+                            <p>齊木楠雄的災難</p>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="">
+                                <img src="source/img/ad/011.jpg" width="100%" class="rounded shadow">
+                            </a>
+                            <p>Grand blue</p>
+                        </div>
+                        
+                    </div>
+                    <a class="carousel-control-prev" href="#demo3" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#demo3" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        <footer>
+            <button type="button" id="BackTop" class="toTop-arrow"></button>
+            <div class="text-center" >
+                <p><p>
+                    <br>&copy;CYCH
+                    <p class="copyright">以上資源純屬教學用<br>如有侵權請告知</p><br><br>
+                </div>
+            </footer>
+     
+            <script src="source/js/script.js"></script>
+            <script src="source/js/totop.js"></script>
+            <script src="source/js/cart.js"></script>
+            
+            
+            <!-- 開啟 modal -->
+            <div class="modal fade" id="login">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">登入</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <form method="post" class="was-validated">
+                                <img class="signimg mx-auto d-block" src="source/img/icon/sign.png">
+                                <div class="form-group">
+                                    <label>帳號:</label>
+                                    <input type="text" class="form-control form-control-lg" placeholder="8-16英文數字" name="username" maxlength="16" required/>
+                                    <div class="valid-feedback">已輸入</div>
+                                    <div class="invalid-feedback">不為空值</div>
+                                </div>
+                                <div class="form-group">
+                                    <label>密碼:</label>
+                                    <input type="password" class="form-control form-control-lg" placeholder="8-16英文數字" name="password" maxlength="16" required/>
+                                    <div class="valid-feedback">已輸入</div>
+                                    <div class="invalid-feedback">不為空值</div>
+                                </div>
+                                <button type="submit" class="col-12 btn btnstyle m-2">登入</button>
+                                <a href="resgister.html" class="col-12 btn btnstyle m-2"> 註冊</a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>      
+        </body>
+    </html>

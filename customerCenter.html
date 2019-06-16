@@ -1,0 +1,174 @@
+<link rel="Shortcut Icon" href="favicon.ico">
+<!DOCTYPE html>
+<html lang="zn_HANT-tw">
+    <head>
+        <title>CYCH</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        <link href="https://fonts.googleapis.com/css?family=Italianno" rel="stylesheet">
+        
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
+        <link rel="stylesheet" href="source/css/bootstrap.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="source/js/bootstrap.js"></script>
+        
+        <style>
+        @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+        @import url("source/css/style.css");
+        @import url("source/css/nav.css");
+        @import url("source/css/comment.css");
+        td{
+        height: 50px;
+        }
+        .noin{
+        margin: 100px 0;
+        }
+        </style>
+    </head>
+    <body id="main">
+        
+        
+        <header class="container-fluid">
+            <!-- Nav 開始 -->
+            <nav class="row">
+                <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; MENU</span>
+                <div id="MySidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="shop.html">商品</a>
+                    <a href="cart.html">購物車</a>
+                    <a href="member.html">關於我們</a>
+                    <a href="customerCenter.html">會員中心</a>
+                    
+                </div>
+            </nav>
+            <!-- Nav 結束 -->
+            <img class="mx-auto d-block img-fluid" src="source/img/icon/logo.png" style="height:100px" />
+            <div class="row">
+                <div class="col-12 d-flex flex-row-reverse">
+                    <a class="btn btnstyle col-3 col-sm-3 col-md-2 col-lg-1 m-1" href="index.html">首頁</a>
+                    
+                    <button type="button" class="btn btnstyle col-3 col-sm-3 col-md-2 col-lg-1 m-1" data-toggle='modal'
+                    data-target='#logout'>登出</button>
+                    
+                </div>
+            </div>
+        </header>
+        
+        <div class="container body">
+            
+            <div class="text-center h1 text-font">個人資料:</div>
+            <div class="row" style="padding: 3% 0px 3% 0%;border-width: 2px;border-style: solid;border-color: #444444;">
+                <div class="col-sm-4 text-center">
+                    <img src="source/img/icon/sign.png" style="width: 40%;"/>
+                </div>
+                <div class="col-sm-8">
+                    
+                    <table class="col-12">
+                        <tr>
+                            <td>姓名:lebron</td>
+                            <td>生日:1995-01-17</td>
+                        </tr>
+                        <tr>
+                            <td>性別:男士</td>
+                            <td>年齡:24</td>
+                        </tr>
+                        <tr> 
+                        </tr>
+                    </table>
+                    <td>Email:12345678@gmail.com</td>     
+                </div>
+            </div>
+            
+            <div class="text-center h1 text-font" style="margin-top:50px;">購買紀錄</div>
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover" style="min-width:500px">
+                    <thead>
+                        <tr>
+                            <th>訂單日期</th>
+                            <th>付款狀態</th>
+                            <th>商品</th>
+                            <th>交易</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2019-06-16 11:16:06.0</td>
+                            <td>未付款</td>
+                            <td><a href="viewbuy.html" class="btn btnstyle text-font">商品</a></td>
+                            <td>交易未完成</td>
+                        </tr>
+                        
+                        <tbody>
+                        </table>
+                        
+                    </div>
+                    <h2 class="text-center text-font" style="margin-top:70px;">留言紀錄</h2>
+                    <div class="col-sm-12">
+                        
+                        <div class="message p-3 my-2">
+                            <img class="head" src="source/img/icon/sign.png">干物妹小埋
+                            <div class="star">
+                                <span class='checked'> ★ </span>
+                                <span class='checked'> ★ </span>
+                                <span class='checked'> ★ </span>
+                                <span> ★ </span>
+                                <span> ★ </span>
+                            </div>
+                            <div class="texta">good!</div>
+                            <small class="d-flex flex-row-reverse">2019-06-15 10:31:43.0</small>
+                        </div>
+                        
+                    </div>
+                </div>
+   
+                <footer>
+                    <button type="button" id="BackTop" class="toTop-arrow"></button>
+                    <div class="text-center" >
+                        <p><p>
+                            <br>&copy;CYCH
+                            <p class="copyright">以上資源純屬教學用<br>如有侵權請告知</p><br><br>
+                        </div>
+                    </footer>
+                    
+                    
+                    <script src="source/js/script.js"></script>
+                    <script src="source/js/totop.js"></script>
+                    
+                    
+                    <!-- 開啟 modal -->
+                    <div class="modal fade" id="login">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">登入</h4>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                                <div class="modal-body">
+                                    <form method="post" class="was-validated">
+                                        <img class="signimg mx-auto d-block" src="source/img/icon/sign.png">
+                                        <div class="form-group">
+                                            <label>帳號:</label>
+                                            <input type="text" class="form-control form-control-lg" placeholder="8-16英文數字" name="username" maxlength="16" required/>
+                                            <div class="valid-feedback">已輸入</div>
+                                            <div class="invalid-feedback">不為空值</div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>密碼:</label>
+                                            <input type="password" class="form-control form-control-lg" placeholder="8-16英文數字" name="password" maxlength="16" required/>
+                                            <div class="valid-feedback">已輸入</div>
+                                            <div class="invalid-feedback">不為空值</div>
+                                        </div>
+                                        <button type="submit" class="col-12 btn btnstyle m-2">登入</button>
+                                        <a href="resgister.html" class="col-12 btn btnstyle m-2"> 註冊</a>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </body>
+            </html>
