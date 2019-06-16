@@ -1,0 +1,231 @@
+<link rel="Shortcut Icon" href="favicon.ico">
+<!DOCTYPE html>
+<html lang="zn_HANT-tw">
+<head>
+    
+    <title>CYCH 干物妹小埋</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css?family=Italianno" rel="stylesheet"> 
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="source/css/bootstrap.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="source/js/bootstrap.js"></script>
+    <style>
+        @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+        @import url("source/css/style.css");
+        @import url("source/css/nav.css");
+        @import url("source/css/comment.css");  
+    </style>    
+</head>
+<body id="main">
+    <header class="container-fluid">
+        <!-- Nav 開始 -->
+        <nav class="row">
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; MENU</span>
+
+            <div id="MySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="shop.html">商品</a>
+                <a href="cart.html">購物車</a>
+                <a href="member.html">關於我們</a>
+                <a href="customerCenter.html">會員中心</a>              
+            </div>
+        </nav>
+        <!-- Nav 結束 -->
+        <img class="mx-auto d-block img-fluid" src="source/img/icon/logo.png" style="height:100px" />
+        <div class="row">
+            <div class="col-12 d-flex flex-row-reverse">
+                <a class="btn btnstyle col-3 col-sm-3 col-md-2 col-lg-1 m-1" href="index.html">首頁</a>   
+                <button type="button" class="btn btnstyle col-3 col-sm-3 col-md-2 col-lg-1 m-1" data-toggle='modal'
+                    data-target='#login'>登入</button>           
+            </div>
+        </div>
+    </header>
+    <div class="container body">
+        <div class="row">
+        
+            <div class="col-sm-5">
+                <img class="img-fluid" src="source/img/product/p12.jpg" style="width:367px;height:451px" alt="商品圖片"/>
+            </div>
+            <div class="col-sm-7 text-font">
+                <h3 class="text-font">干物妹小埋</h3>
+                <p>作者:三角頭</p>
+                <p>畫師:三角頭</p>
+                <p>簡介:<br>《我家有個魚乾妹》描述女高中生土間埋與她的哥哥土間大平一起生活的故事。在學校裡八面玲瓏的小埋，一回到家就變成了遊手好閒的魚乾妹，花大量的時間躺在地板上玩遊戲，並不斷指使她的哥哥做各種雜事，這也因此讓大平感到十分苦惱。在這段生活中，有著另類性格的小埋與她的同學本場切繪成為了朋友，還遇到了在學校的競爭對手橘·希爾芬福特，而這兩人的哥哥都是與大平同一間辦公室的同事。</p>
+                <p>庫存:<span id="buymax">30</span></p>
+                <p class="h2" style="color:black;">NT$<span style="color:red;">300</span></p>
+                    <div>
+                        <label >數量:</label>
+                        <input type='button' value='-' class='qtyminus btn btnstyle' field='quantity' />
+                        <input class="qty btn btn-dark" id="qty" type='text' name='quantity' value='1' size="1" style="ime-mode:disabled" onkeyup="return ValidateNumber(this,value)" required/>
+                        <input type='button' value='+' class='qtyplus btn btnstyle' field='quantity' />
+                    </div>
+                    <br>
+                    <a class="btn btn-lg btn-warning" href ="cart.html">加入購物車</a>
+                    <a class="btn btn-lg btn-warning" href="cart.html">直接購買</a>
+            </div>
+            <div class="col-sm-12">
+            	<h2 class="m-3 text-font">留言區：</h2>
+                    <div class="message p-3 my-2">            
+                        <form class="needs-validation" novalidate action="" method="post">
+                             評星:
+                            <div class="stars">
+                                <input type="radio" class="form-control" id="star5" name="stars" value="5" hidden required/>
+                                <label for="star5">★</label>
+
+                                <input type="radio" id="star4" name="stars" value="4" hidden />
+                                <label for="star4">★</label>
+
+                                <input type="radio" id="star3" name="stars" value="3" hidden />
+                                <label for="star3">★</label>
+
+                                <input type="radio" id="star2" name="stars" value="2" hidden />
+                                <label for="star2">★</label>
+
+                                <input type="radio" id="star1" name="stars" value="1" hidden />
+                                <label for="star1">★</label>
+
+                                <div class="valid-feedback">已評分</div>
+                                <div class="invalid-feedback">請評分</div>
+                            </div>
+                            <br>
+                            <br>留言內容:
+                            <textarea class="form-control my-3" rows="4" name="comment" placeholder="最多五十字" maxlength="50" required></textarea>
+                            <div class="valid-feedback">已輸入</div>
+                            <div class="invalid-feedback">不為空白</div>
+                            <br>
+                            <div class="form_button">
+                                <input type="submit" value="送出" class="btn btnstyle">
+                                <input type="reset" value="重填" class="btn btn-warning">
+                            </div>
+                        </form> 
+                    </div>
+					<div class="message p-3 my-2">
+						<img class="head" src="source/img/icon/sign.png">訪客<small>2019-06-12 22:42:12.0</small>
+						<div class="star">
+                        <span class='checked'> ★ </span>
+<span class='checked'> ★ </span>
+<span class='checked'> ★ </span>
+<span class='checked'> ★ </span>
+<span class='checked'> ★ </span>
+
+                        </div>
+						<div class="texta">good</div>
+					</div>
+            </div>   
+        </div>
+          <div class="text-center text-font"  style="margin-top:100px;">
+        <p class="h2 text-font">推薦商品</p>
+        <div id="demo3" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                
+                <div class="carousel-item active">
+                    
+                    <a href="productinfo.jsp?pr=東京喰種">
+                        <img src="source/img/ad/002.jpg" width="100%" class="rounded shadow">
+                    </a>
+                    <p>東京喰種</p>
+                </div>
+                
+                <div class="carousel-item">
+                
+                    <a href="productinfo.jsp?pr=關於我轉生成史萊姆這檔事">
+                        <img src="source/img/ad/003.jpg" width="100%" class="rounded shadow">
+                    </a>
+                    <p>關於我轉生成史萊姆這檔事</p>
+                </div>
+                
+                <div class="carousel-item">
+                
+                    <a href="productinfo.jsp?pr=魔法使的新娘">
+                        <img src="source/img/ad/010.jpg" width="100%" class="rounded shadow">
+                    </a>
+                    <p>魔法使的新娘</p>
+                </div>
+                
+                <div class="carousel-item">
+                
+                    <a href="productinfo.jsp?pr=赤紅之瞳">
+                        <img src="source/img/ad/012.jpg" width="100%" class="rounded shadow">
+                    </a>
+                    <p>赤紅之瞳</p>
+                </div>
+                
+            </div>
+            <a class="carousel-control-prev" href="#demo3" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+           <a class="carousel-control-next" href="#demo3" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+    
+            
+        </div>
+
+    </div>
+    <footer>
+        <button type="button" id="BackTop" class="toTop-arrow"></button>    
+       <div class="text-center">
+        <br>&copy;CYCH
+        <p class="copyright">以上資源純屬教學用<br>如有侵權請告知</p><br><br>
+        </div>
+    </footer>
+    <script src="source/js/script.js"></script>
+    <script src="source/js/totop.js"></script>
+    <script src="source/js/productinfo.js"></script>
+
+    <script>
+    (function() {
+    'use strict';
+    window.addEventListener('load', function() {
+        var forms = document.getElementsByClassName('needs-validation');
+        var validation = Array.prototype.filter.call(forms, function(form) {
+        form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+        }, false);
+        });
+    }, false);
+    })();
+    </script>
+<!-- 開啟 modal -->
+<div class="modal fade" id="login">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">登入</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form method="post" class="was-validated">
+                    <img class="signimg mx-auto d-block" src="source/img/icon/sign.png">
+                    <div class="form-group">
+                        <label>帳號:</label>
+                        <input type="text" class="form-control form-control-lg" placeholder="8-16英文數字" name="username" maxlength="16" required/>
+                        <div class="valid-feedback">已輸入</div>
+                        <div class="invalid-feedback">不為空值</div>
+                    </div>
+                    <div class="form-group">
+                        <label>密碼:</label>
+                        <input type="password" class="form-control form-control-lg" placeholder="8-16英文數字" name="password" maxlength="16" required/>
+                        <div class="valid-feedback">已輸入</div>
+                        <div class="invalid-feedback">不為空值</div>
+                    </div>
+                    <button type="submit" class="col-12 btn btnstyle m-2">登入</button>
+                    <a href="resgister.html" class="col-12 btn btnstyle m-2"> 註冊</a>         
+                </form>  
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

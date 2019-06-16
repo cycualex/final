@@ -1,0 +1,198 @@
+<link rel="Shortcut Icon" href="favicon.ico">
+<!DOCTYPE html>
+<html lang="zn_HANT-tw">
+    <head>
+        <title>CYCH</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        <link href="https://fonts.googleapis.com/css?family=Italianno" rel="stylesheet">
+        
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
+        <link rel="stylesheet" href="source/css/bootstrap.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="source/js/bootstrap.js"></script>
+        
+        <style>
+        @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+        @import url("source/css/style.css");
+        @import url("source/css/nav.css");
+        .smallmemberdata {
+        margin-top: 5%;
+        padding-top: 8%;
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-bottom: 8%;
+        box-shadow: 2px 3px 5px 6px #DDDDDD;
+        background-color:  rgba(255,253,192,0.8);
+        }
+        .rg-form {
+        padding: 25px 0px 25px 0px;
+        border: 3px #AAAAAA solid;
+        }
+        
+        </style>
+    </head>
+    <body id="main">
+        
+        
+        <header class="container-fluid">
+            <!-- Nav 開始 -->
+            <nav class="row">
+                <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; MENU</span>
+                <div id="MySidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="shop.html">商品</a>
+                    <a href="cart.html">購物車</a>
+                    <a href="member.html">關於我們</a>
+                    <a href="customerCenter.html">會員中心</a>
+                    
+                </div>
+            </nav>
+            <!-- Nav 結束 -->
+            <img class="mx-auto d-block img-fluid" src="source/img/icon/logo.png" style="height:100px" />
+            <div class="row">
+                <div class="col-12 d-flex flex-row-reverse">
+                    <a class="btn btnstyle col-3 col-sm-3 col-md-2 col-lg-1 m-1" href="index.html">首頁</a>
+                    
+                    <button type="button" class="btn btnstyle col-3 col-sm-3 col-md-2 col-lg-1 m-1" data-toggle='modal'
+                    data-target='#login'>登入</button>
+                    
+                </div>
+            </div>
+        </header>
+        
+        <div class="container body">
+            
+            <div class="row">
+                <div class="col-12 smallmemberdata">
+                    <h4 class="text-center">填寫會員基本資料<h4>
+                    <form class="rg-form was-validated" method="post" action="source/jsp/register.jsp">
+                        <img class="signimg mx-auto d-block" src="source/img/icon/sign.png">
+                        <div class="row m-1">
+                            <div class="form-group col-md-4 offset-md-1">
+                                姓名: <input type="text" class="form-control col-md-8" name="name" maxlength="10" required/>
+                                <div class="valid-feedback">已輸入</div>
+                                <div class="invalid-feedback">不為空值</div>
+                            </div>
+                            <div class="offset-1" style="margin-top:2%;">
+                                性別:
+                                <div class="row p-3 p-sm-5">
+                                    <div class="col-6 col-sm-6">
+                                        <label class="form-check-label">
+                                            <input type="radio" class="form-check-input" name="sex" value="1" checked required>先生
+                                        </label>
+                                    </div>
+                                    <div class="col-6 col-sm-6">
+                                        <label class="form-check-label">
+                                            <input type="radio" class="form-check-input" name="sex" value="0" required>小姐
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="row m-1">
+                            <div class="form-group col-md-4 offset-md-1">
+                                帳號: <input type="text" class="form-control col-md-12" name="username" maxlength="16" required/>
+                                <div class="valid-feedback">已輸入</div>
+                                <div class="invalid-feedback">不為空值</div>
+                            </div>
+                            <div class="form-group col-md-6 offset-md-1" style="margin-top:3%;">
+                                生日:
+                                <div class="row m-sm-0 ">
+                                    <div class="col-12 col-sm-4 m-2 m-sm-0"><select name="Year" id="selYear"></select>年</div>
+                                    <div class="col-12 col-sm-4 m-2 m-sm-0"><select name="Month" id="selMonth"></select>月</div>
+                                    <div class="col-12 col-sm-4 m-2 m-sm-0"><select name="Day" id="selDay"></select>日</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row m-1">
+                            <div class="form-group col-md-5 offset-md-1">
+                                密碼: <input type="password" class="form-control col-md-10" name="password1" maxlength="16" required/>
+                                <div class="valid-feedback">已輸入</div>
+                                <div class="invalid-feedback">不為空值</div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                確認密碼: <input type="password" class="form-control col-md-8" name="password2" maxlength="16" required/>
+                                <div class="valid-feedback">已輸入</div>
+                                <div class="invalid-feedback">不為空值</div>
+                            </div>
+                        </div>
+                        <div class="row m-1">
+                            <div class="form-group col-md-12 offset-md-1">
+                                信箱: <input type="email" class="form-control col-md-4" name="email" maxlength="30" required/>
+                                <div class="valid-feedback">已輸入</div>
+                                <div class="invalid-feedback">輸入信箱帳號</div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-success ">註冊</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+        <footer>
+            <button type="button" id="BackTop" class="toTop-arrow"></button>
+            <div class="text-center">
+                    <br>&copy;CYCH
+                    <p class="copyright">以上資源純屬教學用<br>如有侵權請告知</p><br><br>
+                </div>
+            </footer>
+            <script src="source/js/script.js"></script>
+            <script src="source/js/totop.js"></script>
+            <script  src="source/js/date.js"></script>
+            <!-- 開啟 modal -->
+            <div class="modal fade" id="login">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">登入</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <form method="post" class="was-validated">
+                                <img class="signimg mx-auto d-block" src="source/img/icon/sign.png">
+                                <div class="form-group">
+                                    <label>帳號:</label>
+                                    <input type="text" class="form-control form-control-lg" placeholder="8-16英文數字" name="username" maxlength="16" required/>
+                                    <div class="valid-feedback">已輸入</div>
+                                    <div class="invalid-feedback">不為空值</div>
+                                </div>
+                                <div class="form-group">
+                                    <label>密碼:</label>
+                                    <input type="password" class="form-control form-control-lg" placeholder="8-16英文數字" name="password" maxlength="16" required/>
+                                    <div class="valid-feedback">已輸入</div>
+                                    <div class="invalid-feedback">不為空值</div>
+                                </div>
+                                <button type="submit" class="col-12 btn btnstyle m-2">登入</button>
+                                <a href="resgister.jsp" class="col-12 btn btnstyle m-2"> 註冊</a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="logout">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">登出</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body text-center">
+                            <form method="post" action="source/jsp/logout.jsp">
+                                <p>你真的要登出嗎?</p>
+                                <button type="submit" class="btn btnstyle m-2">確定</button>
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">取消</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </body>
+    </html>

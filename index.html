@@ -1,0 +1,263 @@
+<link rel="Shortcut Icon" href="favicon.ico">
+<!DOCTYPE html>
+<html lang="zn_HANT-tw">
+    <head>
+        <title>CYCH</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        <link href="https://fonts.googleapis.com/css?family=Italianno" rel="stylesheet">
+        
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
+        <link rel="stylesheet" href="source/css/bootstrap.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="source/js/bootstrap.js"></script>
+        
+        <style>
+        @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+        @import url("source/css/style.css");
+        @import url("source/css/nav.css");
+        @import url("source/css/comment.css");
+        </style>
+    </head>
+    <body id="main">
+        <header class="container-fluid">
+            <!-- Nav 開始 -->
+            <nav class="row">
+                <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; MENU</span>
+                <div id="MySidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="shop.html">商品</a>
+                    <a href="cart.html">購物車</a>
+                    <a href="member.html">關於我們</a>
+                    <a href="customerCenter.html">會員中心</a>
+                    
+                </div>
+            </nav>
+            <!-- Nav 結束 -->
+            <img class="mx-auto d-block img-fluid" src="source/img/icon/logo.png" style="height:100px" />
+            <div class="row">
+                <div class="col-12 d-flex flex-row-reverse">
+                    <a class="btn btnstyle col-3 col-sm-3 col-md-2 col-lg-1 m-1" href="index.html">首頁</a>
+                    
+                    <button type="button" class="btn btnstyle col-3 col-sm-3 col-md-2 col-lg-1 m-1" data-toggle='modal'
+                    data-target='#login'>登入</button>
+                </div>
+            </div>
+        </header>
+        
+        <div class="container body">
+            <div class="row">
+                <div id="demo" class="carousel slide p-2 col-md-5 col-lg-4 offset-lg-1" data-ride="carousel">
+                    <div class="h1 text-center text-font">熱門商品</div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <a href="">
+                                <img src="source/img/product/p3.jpg" width="100%" style="height:400px" class="rounded shadow">
+                            </a>
+                            <div class="text-center">
+                                <h3 style="color:black;">鑽石王牌</h3>
+                                <p style="color:black;">第一名熱銷商品</p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            
+                            <a href="productinfo.html">
+                                <img src="source/img/product/p12.jpg" width="100%" style="height:400px" class="rounded shadow">
+                            </a>
+                            <div class="text-center">
+                                <h3 style="color:black;">干物妹小埋</h3>
+                                <p style="color:black;">第二名熱銷商品</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            
+                            <a href="">
+                                <img src="source/img/product/p9.jpg" width="100%" style="height:400px" class="rounded shadow">
+                            </a>
+                            <div class="text-center">
+                                <h3 style="color:black;">齊木楠雄的災難</h3>
+                                <p style="color:black;">第三名熱銷商品</p>
+                            </div>
+                        </div>
+                        <div class="h4 text-center">目前尚未有人評分</div>
+                    </div>
+                    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#demo" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+                </div>
+                <div id="demo2" class="carousel slide p-2 col-md-5 col-lg-4 offset-md-2" data-ride="carousel">
+                    <div class="h1 text-center text-font">最高評分</div>
+                    <div class="carousel-inner">
+                        
+                        <div class="carousel-item active">
+                            
+                            <a href="">
+                                <img src="source/img/product/p1.jpg" width="100%" style="height:400px;" class="rounded shadow">
+                            </a>
+                            <div class="text-center">
+                                <h3 style="color:black;">我的英雄學院</h3>
+                                <p style="color:black;">評分:
+                                    <span class='checked'> ★ </span>
+                                    <span class='checked'> ★ </span>
+                                    <span class='checked'> ★ </span>
+                                    <span class='checked'> ★ </span>
+                                    <span class='checked'> ★ </span>
+                                    <br>
+                                    (1個人評分)
+                                </p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            
+                            <a href="">
+                                <img src="source/img/product/p9.jpg" width="100%" style="height:400px;" class="rounded shadow">
+                            </a>
+                            <div class="text-center">
+                                <h3 style="color:black;">齊木楠雄的災難</h3>
+                                <p style="color:black;">評分:
+                                    <span class='checked'> ★ </span>
+                                    <span class='checked'> ★ </span>
+                                    <span class='checked'> ★ </span>
+                                    <span class='checked'> ★ </span>
+                                    <span> ★ </span>
+                                    <br>
+                                    (2個人評分)
+                                </p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            
+                            <a href="">
+                                <img src="source/img/product/p6.jpg" width="100%" style="height:400px;" class="rounded shadow">
+                            </a>
+                            <div class="text-center">
+                                <h3 style="color:black;">關於我轉生成史萊姆這檔事</h3>
+                                <p style="color:black;">評分:
+                                    <span class='checked'> ★ </span>
+                                    <span class='checked'> ★ </span>
+                                    <span class='checked'> ★ </span>
+                                    <span class='checked'> ★ </span>
+                                    <span> ★ </span>
+                                    <br>
+                                    (3個人評分)
+                                </p>
+                            </div>
+                        </div>
+                        <div class="h4 text-center">目前尚未有人評分</div>
+                    </div>
+                    <a class="carousel-control-prev" href="#demo2" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#demo2" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="row p-2">
+                <div class="col-sm-7 p-3">
+                    <!--分隔-->
+                    <div class="card shadow">
+                        <div class="card-header">
+                            地點
+                        </div>
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p>320桃園市中壢區中北路200號</p>
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="card shadow mt-4">
+                        <div class="card-header">
+                            聯絡資訊
+                        </div>
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p>日間 0800-090-123<br>夜間 0800-070-123</p>
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="card shadow mt-4">
+                        <div class="card-header">
+                            交通資訊
+                        </div>
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p>搭乘桃園客運至中原站下車<br>搭乘火車至中壢火車站下車轉公車</p>
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="card shadow mt-4">
+                        <div class="card-header">
+                            營業時間
+                        </div>
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p>週一~週五  09:00-18:00<br>週六~週日  12:00-16:00</p>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-5 p-3">
+                    <iframe class="rounded shadow"
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7234.51900642065!2d121.23602136239626!3d24.957284098120393!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2b86d2650bb8bcff!2z5Lit5Y6f5aSn5a24!5e0!3m2!1szh-TW!2stw!4v1560178076224!5m2!1szh-TW!2stw"
+                    width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="text-center text-font"  style="margin-top:100px;">
+                <p class="h2 text-font">廣告</p>
+                <a style='color:black' href='productinfo.html'>
+                    <img class='ad img-fluid' src='source/img/ad/001.jpg'
+                    alt='干物妹小埋'<p>干物妹小埋</p></a>
+                </div>
+            </div>
+            <footer>
+                <button type="button" id="BackTop" class="toTop-arrow"></button>
+                <div class="text-center" >
+                    <p><p>
+                        <br>&copy;CYCH
+                        <p class="copyright">以上資源純屬教學用<br>如有侵權請告知</p><br><br>
+                    </div>
+                </footer>
+                <script src="source/js/script.js"></script>
+                <script src="source/js/totop.js"></script>
+                <!-- 開啟 modal -->
+                <div class="modal fade" id="login">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">登入</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <form method="post" class="was-validated">
+                                    <img class="signimg mx-auto d-block" src="source/img/icon/sign.png">
+                                    <div class="form-group">
+                                        <label>帳號:</label>
+                                        <input type="text" class="form-control form-control-lg" placeholder="8-16英文數字" name="username" maxlength="16" required/>
+                                        <div class="valid-feedback">已輸入</div>
+                                        <div class="invalid-feedback">不為空值</div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>密碼:</label>
+                                        <input type="password" class="form-control form-control-lg" placeholder="8-16英文數字" name="password" maxlength="16" required/>
+                                        <div class="valid-feedback">已輸入</div>
+                                        <div class="invalid-feedback">不為空值</div>
+                                    </div>
+                                    <button type="submit" class="col-12 btn btnstyle m-2">登入</button>
+                                    <a href="resgister.html" class="col-12 btn btnstyle m-2"> 註冊</a>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </body>
+        </html>

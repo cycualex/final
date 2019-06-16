@@ -1,0 +1,224 @@
+<link rel="Shortcut Icon" href="favicon.ico">
+<!DOCTYPE html>
+<html lang="zn_HANT-tw">
+    <head>
+        <title>CYCH 熱血</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        <link href="https://fonts.googleapis.com/css?family=Italianno" rel="stylesheet">
+        
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
+        <link rel="stylesheet" href="source/css/bootstrap.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="source/js/bootstrap.js"></script>
+        
+        <style>
+        @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+        @import url("source/css/style.css");
+        @import url("source/css/nav.css");
+        </style>
+    </head>
+    <body id="main">  
+        <header class="container-fluid">
+            <!-- Nav 開始 -->
+            <nav class="row">
+                <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; MENU</span>
+                <div id="MySidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="shop.html">商品</a>
+                    <a href="cart.html">購物車</a>
+                    <a href="member.html">關於我們</a>
+                    <a href="customerCenter.html">會員中心</a>
+                    
+                </div>
+            </nav>
+            <!-- Nav 結束 -->
+            <img class="mx-auto d-block img-fluid" src="source/img/icon/logo.png" style="height:100px" />
+            <div class="row">
+                <div class="col-12 d-flex flex-row-reverse">
+                    <a class="btn btnstyle col-3 col-sm-3 col-md-2 col-lg-1 m-1" href="index.html">首頁</a>
+                    
+                    <button type="button" class="btn btnstyle col-3 col-sm-3 col-md-2 col-lg-1 m-1" data-toggle='modal'
+                    data-target='#login'>登入</button>
+                    
+                </div>
+            </div>
+        </header>
+        
+        <div class="container body">
+            <h2 class="text-center m-5 burn">熱血</h2>
+            <div class="row">
+                <a class="btn btnstyle btn-lg m-1 p-2" href="shop.html">全部</a>
+                <a class="btn btnstyle btn-lg m-1 p-2" href="shopburn.html">熱血</a>
+                <a class="btn btnstyle btn-lg m-1 p-2" href="shopfic.html">科幻</a>
+                <a class="btn btnstyle btn-lg m-1 p-2" href="shopdaily.html">校園</a>
+                
+                <form class="input-group" action="" method="get">
+                    <input type="text" class="form-control" placeholder="請輸入 書名 作者 畫師 或 類別...." name="search">
+                    <div class="input-group-append">
+                        <button class="btn btn-success">搜尋</button>
+                    </div>
+                </form>
+                <hr class="mx-auto d-block" />
+            </div>
+            <div id="demo" class="carousel slide" data-ride="carousel">
+                <ul class="carousel-indicators">
+                    <li data-target="#demo" data-slide-to="0" class="active"></li>
+                    <li data-target="#demo" data-slide-to="1"></li>
+                    <li data-target="#demo" data-slide-to="2"></li>
+                </ul>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="source/img/slide/burn.jpg" width="100%">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="source/img/slide/burn1.jpg" width="100%">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="source/img/slide/burn2.jpg" width="100%">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#demo" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
+            <div class="row" style="margin-top:20px;">
+                
+                <a class="btn btnstyle col-4 col-sm-4 col-lg-2 m-1" href="#class1">格鬥</a>
+                <a class="btn btnstyle col-4 col-sm-4 col-lg-2 m-1" href="#class2">運動</a>
+            </div>
+            <div class="shopclass" id="class1">
+                <hr>
+                <h2 class="text-center m-5">格鬥</h2>
+                <hr>
+                <div class="row">     
+                    <a class="cards" href="">
+                        <div class="col-sm-6 col-md-4 mg">
+                            <h4 class="text-center text-font">一拳超人</h4>
+                            <img src="source/img/product/p2.jpg" width="100%" height="400px;" alt="商品圖片">
+                            <div class="row">
+                                <div class="col-sm-8 col-md-7">
+                                    <a href="" class="col-12 btn btn-warning text-font" style="margin-top:5px">詳細介紹</a>
+                                    
+                                    <a href="" class="col-12 btn btn-warning text-font" style="margin-top:5px">購買</a>
+                                </div>
+                                <div class="col-sm-4 col-md-5">
+                                    <a href="" class="col-12 btn btn-warning" style="margin-top:5px">
+                                        <img class="img-fluid" src="source/img/icon/cart.png" style="min-height:60px;">
+                                    </a>    
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="cards" href="">
+                        <div class="col-sm-6 col-md-4 mg">
+                            <h4 class="text-center text-font">我的英雄學院</h4>
+                            <img src="source/img/product/p1.jpg" width="100%" height="400px;" alt="商品圖片">
+                            <div class="row">
+                                <div class="col-sm-8 col-md-7">
+                                    <a href="" class="col-12 btn btn-warning text-font" style="margin-top:5px">詳細介紹</a>
+                                    
+                                    <a href="" class="col-12 btn btn-warning text-font" style="margin-top:5px">購買</a>
+                                </div>
+                                <div class="col-sm-4 col-md-5">
+                                    <a href="" class="col-12 btn btn-warning" style="margin-top:5px">
+                                        <img class="img-fluid" src="source/img/icon/cart.png" style="min-height:60px;">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="shopclass" id="class2">
+                <hr>
+                <h2 class="text-center m-5">運動</h2>
+                <hr>
+                <div class="row"> 
+                    <a class="cards" href="">
+                        <div class="col-sm-6 col-md-4 mg">
+                            <h4 class="text-center text-font">排球少年</h4>
+                            <img src="source/img/product/p4.jpg" width="100%" height="400px;" alt="商品圖片">
+                            <div class="row">
+                                <div class="col-sm-8 col-md-7">
+                                    <a href="" class="col-12 btn btn-warning text-font" style="margin-top:5px">詳細介紹</a>
+                                    
+                                    <a href="" class="col-12 btn btn-warning text-font" style="margin-top:5px">購買</a>
+                                </div>
+                                <div class="col-sm-4 col-md-5"> 
+                                    <a href="" class="col-12 btn btn-warning" style="margin-top:5px">
+                                        <img class="img-fluid" src="source/img/icon/cart.png" style="min-height:60px;">
+                                    </a>                                   
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="cards" href="">
+                        <div class="col-sm-6 col-md-4 mg">
+                            <h4 class="text-center text-font">鑽石王牌</h4>
+                            <img src="source/img/product/p3.jpg" width="100%" height="400px;" alt="商品圖片">
+                            <div class="row">
+                                <div class="col-sm-8 col-md-7">
+                                    <a href="" class="col-12 btn btn-warning text-font" style="margin-top:5px">詳細介紹</a>
+                                    
+                                    <a href="" class="col-12 btn btn-warning text-font" style="margin-top:5px">購買</a>
+                                </div>
+                                <div class="col-sm-4 col-md-5">
+                                    <a href="" class="col-12 btn btn-warning" style="margin-top:5px">
+                                        <img class="img-fluid" src="source/img/icon/cart.png" style="min-height:60px;">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <button type="button" id="BackTop" class="toTop-arrow"></button>
+            <div class="text-center" >
+                    <br>&copy;CYCH
+                    <p class="copyright">以上資源純屬教學用<br>如有侵權請告知</p><br><br>
+                </div>
+            </footer>    
+            <script src="source/js/script.js"></script>
+            <script src="source/js/totop.js"></script>
+            <!-- 開啟 modal -->
+            <div class="modal fade" id="login">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">登入</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <form method="post" class="was-validated">
+                                <img class="signimg mx-auto d-block" src="source/img/icon/sign.png">
+                                <div class="form-group">
+                                    <label>帳號:</label>
+                                    <input type="text" class="form-control form-control-lg" placeholder="8-16英文數字" name="username" maxlength="16" required/>
+                                    <div class="valid-feedback">已輸入</div>
+                                    <div class="invalid-feedback">不為空值</div>
+                                </div>
+                                <div class="form-group">
+                                    <label>密碼:</label>
+                                    <input type="password" class="form-control form-control-lg" placeholder="8-16英文數字" name="password" maxlength="16" required/>
+                                    <div class="valid-feedback">已輸入</div>
+                                    <div class="invalid-feedback">不為空值</div>
+                                </div>
+                                <button type="submit" class="col-12 btn btnstyle m-2">登入</button>
+                                <a href="resgister.jsp" class="col-12 btn btnstyle m-2"> 註冊</a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </body>
+    </html>
